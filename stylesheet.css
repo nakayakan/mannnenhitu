@@ -53,11 +53,11 @@ ul{
 
 li{
   float: left;
-  width: 70px;
+  width: 100px;
 }
 
 li img{
-  width: 25px;
+  width: 30px;
   height: auto;
 }
 
