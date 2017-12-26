@@ -66,8 +66,8 @@
           <img src="images/kaku.png" alt="かく"/>
           <img class="charm-image" src="images/kaku_img.jpg" alt=""/>
           <img class="charm-memo" src="images/kaku_info.png" alt=""/>
+          <img src="images/kaku_img.jpg" alt="" class="hoverimg">
         </a>
-        <img src="images/kaku_img.jpg" alt="" class="hoverimg">
       </div>
     </div>
 
@@ -159,15 +159,18 @@
 
       // モーダルコンテンツのIDを取得
       var modal = '#' + $(this).attr('data-target');
-      // モーダルコンテンツの表示位置を設定
-      modalResize();
-      // モーダルコンテンツフェードイン
-      $(modal).fadeIn('slow');
+
+      // モーダルコンテンツの更新
       var charmImageSrc = $(this).find('.charm-image').attr('src')
       var charmMemoSrc = $(this).find('.charm-memo').attr('src')
 
       $(modal).find('.modalimg').attr('src', charmImageSrc);
       $(modal).find('.modal-memo-img').attr('src', charmMemoSrc);
+
+      // モーダルコンテンツの表示位置を設定
+      modalResize();
+      // モーダルコンテンツフェードイン
+      $(modal).fadeIn('slow');
 
       // 「.modal-overlay」あるいは「.modal-close」をクリック
       $('.modal-overlay, .modal-close').off().click(function(){
