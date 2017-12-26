@@ -86,7 +86,7 @@ a:hover{
   margin-top: 4px;
 }
 
-.box a:hover + .hoverimg{
+.box a:hover .hoverimg{
   display:block;
 }
 
