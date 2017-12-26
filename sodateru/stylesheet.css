@@ -1,0 +1,106 @@
+html{
+  cursor: url(images/cursor.png),url(images/cursor.cur),pointer;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(images/back.jpg);
+  background-size: cover;
+}
+
+a:hover{
+  cursor: url(images/cursor_hand.png),url(images/cursor_hand.cur),pointer;
+}
+
+.container{
+  display: flex;
+}
+.right{
+  width: 220px;
+  height: auto;
+  text-align: center;
+}
+.contents{
+  flex: 1;
+}
+
+.logo{
+  margin: 30px auto 50px;
+}
+
+.logoimg{
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.title{
+  margin: 50px auto;
+}
+
+.info{
+  margin: 80px auto;
+}
+
+.header{
+  height: 20%;
+}
+
+.menu{
+  margin: 10px;
+  padding: 20px;
+}
+
+ul{
+  display: none;
+}
+
+.wrap{
+  display: flex;
+  flex-direction: row;
+  width: 1008px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.box{
+  width: 232px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.modal-overlay {
+  z-index:2; /*デモではheader,footerをz-index:1にしたので それより上げています*/
+  display:none; /*jsでフェードインされるまでdisplay:none*/
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh; /*100vhでビューポートの高さいっぱいになります*/
+  background-color:rgba(0,0,0,.5)} /*これは好きな色・透明度で*/
+.modal-content {
+  position:fixed;
+  display:none; /*jsでフェードインされるまでdisplay:none*/
+  z-index:3; /*オーバーレイより上に*/
+  margin:10px;
+  padding:15px;
+  background:#fff}
+.modal-content img {width:auto;max-height:75vh}
+.img{
+  float: left;
+}
+.modalimg{
+  width: 500px;
+}
+.text{
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+a.modal-close { /*クローズボタンは何でも好きなスタイルでOK*/
+    position:absolute;
+    top:10px;
+    right:10px;}

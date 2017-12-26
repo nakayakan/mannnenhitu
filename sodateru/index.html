@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <script src="../js/jquery-3.2.1.min.js"></script>
+
+  <div class="container">　
+    <div class="contents">
+    <div class="header">
+      <div class="menu"><img src="images/menu.png" alt=""></div>
+      <ul>
+        <li><a href="../index.html" class="top"></li>
+        <li><a href="../index.html" class="top"></li>
+        <li><a href="../index.html" class="top"></li>
+      </ul>
+    </div>
+      <div class="wrap">
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+      </div>
+      <div class="wrap">
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+      </div>
+      <div class="wrap">
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="logo"><a href="../index.html" class="top"><img src="images/logo.png" alt="" class="logoimg"></a></div>
+      <div class="title"><img src="images/title.png" alt=""/></div>
+      <div class="info"><img src="images/info.png" alt=""/></div>
+    </div>
+  </div>
+
+  <!--Modal contents-->
+  <div id="modal1" class="modal-content">
+    <div class="img"><img src="images/INK.png" class="modalimg"></div>
+    <div class="text"><img src="https://placehold.jp/300x400.png" alt=""/></div>
+    <a class="modal-close"><img src="images/x.png"></a>
+  </div>
+  <div id="modal2" class="modal-content">（略）</div>
+  <div id="modal3" class="modal-content">（略）</div>
+
+<script>
+$(function(){
+
+  // 「.modal-open」をクリック
+  $('.modal-open').click(function(){
+      // オーバーレイ用の要素を追加
+      $('body').append('<div class="modal-overlay"></div>');
+      // オーバーレイをフェードイン
+      $('.modal-overlay').fadeIn('slow');
+
+      // モーダルコンテンツのIDを取得
+      var modal = '#' + $(this).attr('data-target');
+      // モーダルコンテンツの表示位置を設定
+      modalResize();
+       // モーダルコンテンツフェードイン
+      $(modal).fadeIn('slow');
+
+      // 「.modal-overlay」あるいは「.modal-close」をクリック
+      $('.modal-overlay, .modal-close').off().click(function(){
+          // モーダルコンテンツとオーバーレイをフェードアウト
+          $(modal).fadeOut('slow');
+          $('.modal-overlay').fadeOut('slow',function(){
+              // オーバーレイを削除
+              $('.modal-overlay').remove();
+          });
+      });
+
+      // リサイズしたら表示位置を再取得
+      $(window).on('resize', function(){
+          modalResize();
+      });
+
+      // モーダルコンテンツの表示位置を設定する関数
+      function modalResize(){
+          // ウィンドウの横幅、高さを取得
+          var w = $(window).width();
+          var h = $(window).height();
+
+          // モーダルコンテンツの表示位置を取得
+          var x = (w - $(modal).outerWidth(true)) / 2;
+          var y = (h - $(modal).outerHeight(true)) / 2;
+
+          // モーダルコンテンツの表示位置を設定
+          $(modal).css({'left': x + 'px','top': y + 'px'});
+      }
+
+  });
+});
+</script>
+
+</body>
+</html>

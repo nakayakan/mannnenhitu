@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="stylesheet.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <ul>
+  <li><a href="sodateru/index.html" class="sodate"><img src="images/sodate2.png" alt="万年筆の育て方"/></a></li>
+  <li><a href="insta/index.html" class="insta"><img src="images/insta2.png" alt="インスタグラム"/></a></li>
+  <li><a href="info/index.html" class="info"><img src="images/info2.png" alt="このサイトについて"/></a></li>
+  </ul>
+  <a href="index.html" class="logo"><img src="images/logo.png" class="logoimg" alt=""></a>
+
+  <div class="contents">
+    <div class="wrapper">
+      <video src="images/back_art.mp4" autoplay id="video"></video>
+      <img src="images/back_img.jpg" alt="Placeholder" id='img'>
+      <div class="frame1 debug-mode" id="img1"></div>
+      <div class="frame1 debug-mode" id="img2"></div>
+      <div class="frame1 debug-mode" id="img3"></div>
+      <div class="frame2 debug-mode" id="img4"></div>
+      <div class="frame2 debug-mode" id="img5"></div>
+      <div class="frame2 debug-mode" id="aiueo"></div>
+      <div class="frame2 debug-mode" id="wata"></div>
+      <div class="frame2 debug-mode" id="img6"></div>
+      <div class="frame2 debug-mode" id="img7"></div>
+      <div class="frame2 debug-mode" id="img8"></div>
+      <div class="frame2 debug-mode" id="img9"></div>
+      <div class="frame3 debug-mode" id="img10"></div>
+      <div class="frame3 debug-mode" id="img11"></div>
+      <div class="frame3 debug-mode" id="img12"></div>
+      <div class="frame3 debug-mode" id="img13"></div>
+      <div class="frame4 debug-mode" id="img14"></div>
+      <div class="frame4 debug-mode" id="img15"></div>
+      <div class="frame4 debug-mode" id="img16"></div>
+      <div class="frame5 debug-mode" id="img17"></div>
+    </div>
+  </div>
+<div class="pen1 pen">
+  <img src="images/pen1.png" alt="">
+    <p>POLOT CUSTOM742</p>
+</div>
+<div class="pen2 pen">
+  <img src="images/pen2.png" alt="">
+  <p>Sailor</p>
+</div>
+<div class="pen3 pen">
+  <img src="images/pen3.png" alt="">
+  <p>Sailor</p>
+</div>
+<div class="pen4 pen">
+  <img src="images/pen4.png" alt="">
+  <p>PILOT cocoon</p>
+</div>
+<div class="pen5 pen">
+  <img src="images/pen5.png" alt="">
+  <p>PILOT KAKUNO</p>
+</div>
+
+  <div class="button">
+    <img src="images/skip.png" alt="">
+  </div>
+
+<script>
+$(function(){
+    setTimeout(function(){
+        $('#img1').show();
+    }, 500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img2').show();
+    }, 6000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img3').show();
+    }, 11000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img4').show();
+    }, 17000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img5').show();
+    }, 18000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#aiueo').show();
+    }, 20500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#wata').show();
+    }, 22500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img6').show();
+    }, 23500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img7').show();
+    }, 26500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img8').show();
+    }, 34000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img9').show();
+    }, 38000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img10').show();
+    }, 46000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img11').show();
+    }, 61000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img12').show();
+    }, 67000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img13').show();
+    }, 71500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img14').show();
+    }, 77500);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img15').show();
+    }, 83000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img16').show();
+    }, 87000);
+});
+$(function(){
+    setTimeout(function(){
+        $('#img17').show();
+    }, 120000);
+});
+
+var timeOutMS = 100
+
+var flags = {}
+
+function formatPenZIndex(forward) {
+  for(var i = 1; i <= 5; i++) {
+    var className = `.pen${i}`
+    if(forward == className) $(className).css('z-index', 100)
+    else $(className).css('z-index', 1)
+  }
+}
+/* frame1 */
+$('.frame1').mouseover(function(){
+  // console.log('frame1 over', $(this).attr("id"));
+  $('.pen1').addClass('pen-active')
+  formatPenZIndex('.pen1')
+});
+$('.frame1').mouseout(function(){
+  // console.log('frame1 out', $(this).text());
+  $('.pen1').removeClass('pen-active')
+});
+
+/* frame2 */
+var frame2TimeOutId
+$('.frame2').mouseover(function(){
+  // console.log('frame2 over', $(this).attr("id"));
+  formatPenZIndex('.pen2')
+  $('.pen2').addClass('pen-active')
+});
+$('.frame2').mouseout(function(){
+  // console.log('frame2 out', $(this).attr("id"));
+  $('.pen2').removeClass('pen-active')
+});
+
+/* frame3 */
+var frame3TimeOutId
+$('.frame3').mouseover(function(){
+  // console.log('frame3 over', $(this).attr("id"));
+  formatPenZIndex('.pen3')
+  $('.pen3').addClass('pen-active')
+});
+$('.frame3').mouseout(function(){
+  // console.log('frame3 out', $(this).text());
+  $('.pen3').removeClass('pen-active')
+});
+
+/* frame4 */
+var frame4TimeOutId
+$('.frame4').mouseover(function(){
+  // console.log('frame4 over', $(this).attr("id"));
+  formatPenZIndex('.pen4')
+  $('.pen4').addClass('pen-active')
+});
+$('.frame4').mouseout(function(){
+  // console.log('frame4 out', $(this).attr("id"));
+  $('.pen4').removeClass('pen-active')
+});
+
+/* frame5 */
+var frame5TimeOutId
+$('.frame5').mouseover(function(){
+  // console.log('frame5 over', $(this).attr("id"));
+  $('.pen5').addClass('pen-active')
+  formatPenZIndex('.pen5')
+});
+$('.frame5').mouseout(function(){
+  // console.log('frame5 out', $(this).attr("id"));
+  $('.pen5').removeClass('pen-active')
+});
+
+var video = document.getElementById('video');
+$(function() {
+    $('.button').click(function(){
+        //動画を停止
+        video.pause();
+        video.currentTime = 0;
+        // 背景動画を非表示
+        $("#video").toggle(false);
+        $('#img').css('display', 'inline-block');
+        $('.frame1').show();
+        $('.frame2').show();
+        $('.frame3').show();
+        $('.frame4').show();
+        $('.frame5').show();
+    });
+});
+
+</script>
+</body>
+</html>
