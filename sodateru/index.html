@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="../menu.css">
+  <link rel="stylesheet" href="../flip_boarde.css">
 
   <!--[if lt IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -40,101 +41,153 @@
     </div>
 
     <div class="wrap">
-      <div class="box">
-        <a data-target="modal1" class="modal-open" id="suwaseru">
-          <img src="images/suwaseru.png" alt="すわせる"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open  board left" id="suwaseru">
+          <div class="front">
+            <img src="images/suwaseru.png" alt="すわせる"/>
+          </div>
+          <div class="flipped">
+            <img src="images/suwaseru_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/suwaseru_img.jpg" alt=""/>
           <img class="charm-memo" src="images/suwaseru_info.png" alt=""/>
-          <img src="images/suwaseru_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/nazimu.png" alt="なじむ"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/nazimu.png" alt="なじむ"/>
+          </div>
+          <div class="flipped">
+            <img src="images/pensaki_img.jpg" alt="" class="hoverimg">
+            <!--ここ画像代用してるのでちゃんと変えるの忘れずに-->
+          </div>
           <img class="charm-image" src="images/pensaki_img.jpg" alt=""/>
           <img class="charm-memo" src="images/nazimu_info.png" alt=""/>
-          <img src="images/pensaki_img.jpg" alt="" class="hoverimg">
-          <!--ここ画像代用してるのでちゃんと変えるの忘れずに-->
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/miru.png" alt="みる"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/miru.png" alt="みる"/>
+          </div>
+          <div class="flipped">
+            <img src="images/miru_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/miru_img.jpg" alt=""/>
           <img class="charm-memo" src="images/miru_info.png" alt=""/>
-          <img src="images/miru_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
-      <div class="box" id="kaku">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/kaku.png" alt="かく"/>
+      <div class="box flip-boards" id="kaku">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/kaku.png" alt="かく"/>
+          </div>
+          <div class="flipped">
+            <img src="images/kaku_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/kaku_img.jpg" alt=""/>
           <img class="charm-memo" src="images/kaku_info.png" alt=""/>
-          <img src="images/kaku_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
     </div>
 
     <div class="wrap">
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/kami.png" alt="かみ"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/kami.png" alt="かみ"/>
+          </div>
+          <div class="flipped">
+            <img src="images/kami_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/kami_img.jpg" alt=""/>
           <img class="charm-memo" src="images/kami_info.png" alt=""/>
-          <img src="images/kami_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/ink.png" alt="いんく"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/ink.png" alt="いんく"/>
+          </div>
+          <div class="flipped">
+            <img src="images/ink_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/ink_img.jpg" alt=""/>
           <img class="charm-memo" src="images/ink_info.png" alt=""/>
-          <img src="images/ink_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/arau.png" alt="あらう"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/arau.png" alt="あらう"/>
+          </div>
+          <div class="flipped">
+            <img src="images/arau_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/arau_img.jpg" alt=""/>
           <img class="charm-memo" src="images/arau_info.png" alt=""/>
-          <img src="images/arau_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/mamoru.png" alt="まもる"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/mamoru.png" alt="まもる"/>
+          </div>
+          <div class="flipped">
+            <img src="images/mamoru_img.jpg" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="images/mamoru_img.jpg" alt=""/>
           <img class="charm-memo" src="images/mamoru_info.png" alt=""/>
-          <img src="images/mamoru_img.jpg" alt="" class="hoverimg">
         </a>
       </div>
     </div>
 
     <div class="wrap">
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/pensaki.png" alt="ペンさき"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/pensaki.png" alt="ペンさき"/>
+          </div>
+          <div class="flipped">
+            <img src="images/pensaki_img.jpg" alt="" class="hoverimg">
+          </div>
+          <img class="charm-image" src="images/pensaki_img.jpg" alt=""/>
+          <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
+        </a>
+      </div>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/zikan.png" alt="じかん"/>
+          </div>
+          <div class="flipped">
+            <img src="https://placehold.jp/500x500.png" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
           <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/zikan.png" alt="じかん"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/okisa.png" alt="おおきさ"/>
+          </div>
+          <div class="flipped">
+            <img src="https://placehold.jp/500x500.png" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
           <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
         </a>
       </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/okisa.png" alt="おおきさ"/>
-          <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
-          <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
-        </a>
-      </div>
-      <div class="box">
-        <a data-target="modal1" class="modal-open">
-          <img src="images/sozai.png" alt="そざい"/>
+      <div class="box flip-boards">
+        <a data-target="modal1" class="modal-open board left">
+          <div class="front">
+            <img src="images/sozai.png" alt="そざい"/>
+          </div>
+          <div class="flipped">
+            <img src="https://placehold.jp/500x500.png" alt="" class="hoverimg">
+          </div>
           <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
           <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
         </a>

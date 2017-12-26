@@ -76,19 +76,26 @@ a:hover{
   height: 232px;
 }
 
-.hoverimg{
-  display: none;
-  width: 232px;
-  height: 232px;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  margin-top: 4px;
+.box .flipped {
+  box-sizing: border-box;
+  border: solid 1px #92D3D4;
 }
 
-.box a:hover .hoverimg{
-  display:block;
+.hoverimg{
+  width: 100%;
+  height: 100%;
+  /*opacity: none;*/
+  /*width: 232px;*/
+  /*height: 232px;*/
+  /*z-index: 2;*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*margin-top: 4px;*/
 }
+
+/*.box a:hover .hoverimg{*/
+  /*display:block;*/
+/*}*/
 
 .box .charm-image, .box .charm-memo {
   display: none;
