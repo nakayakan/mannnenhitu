@@ -9,6 +9,7 @@
   <meta name="author" content="SitePoint">
 
   <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="../menu.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -24,7 +25,13 @@
       <div id="menu"></div>
     </div>
       <div class="wrap">
-        <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
+        <div class="box">
+          <a data-target="modal1" class="modal-open">
+            <img src="images/arau.png" alt=""/>
+            <img class="charm-image" src="images/arau.png" alt=""/>
+            <img class="charm-memo" src="images/arau.png" alt=""/>
+          </a>
+        </div>
         <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
         <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
         <div class="box"><a data-target="modal1" class="modal-open"><img src="images/arau.png" alt=""/></a></div>
@@ -56,9 +63,9 @@
           <img src="./images/logo.png" alt="">
         </div>
         <ul class="menu-links">
-          <li><a href="../index.html" class="top"><img src="../images/info2.png" alt=""></a></li>
-          <li><a href="../index.html" class="top"><img src="../images/insta2.png" alt=""></a></li>
-          <li><a href="../index.html" class="top"><img src="../images/sodate2.png" alt=""></a></li>
+          <li><a href="../info/index.html" class="top"><img src="../images/info2.png" alt=""></a></li>
+          <li><a href="../insta/index.html" class="top"><img src="../images/insta2.png" alt=""></a></li>
+          <li><a href="../sodateru/index.html" class="top"><img src="../images/sodate2.png" alt=""></a></li>
         </ul>
     </div>
   </div>
@@ -66,7 +73,7 @@
   <!--Modal contents-->
   <div id="modal1" class="modal-content">
     <div class="img"><img src="images/INK.png" class="modalimg"></div>
-    <div class="text"><img src="https://placehold.jp/300x400.png" alt=""/></div>
+    <div class="text"><img src="https://placehold.jp/300x400.png" alt="" class="modal-memo-img"/></div>
     <a class="modal-close"><img src="images/x.png"></a>
   </div>
 
@@ -86,6 +93,11 @@ $(function(){
       modalResize();
        // モーダルコンテンツフェードイン
       $(modal).fadeIn('slow');
+      var charmImageSrc = $(this).find('.charm-image').attr('src')
+      var charmMemoSrc = $(this).find('.charm-memo').attr('src')
+
+      $(modal).find('.modalimg').attr('src', charmImageSrc);
+      $(modal).find('.modal-memo-img').attr('src', charmMemoSrc);
 
       // 「.modal-overlay」あるいは「.modal-close」をクリック
       $('.modal-overlay, .modal-close').off().click(function(){
@@ -117,18 +129,8 @@ $(function(){
       }
 
   });
-
-  $('#menu').click(function() {
-    $(this).addClass('open');
-    $('#menu-container').addClass('show');
-  });
-
-  $('#menu-close').click(function() {
-    $('#menu').removeClass('open');
-    $('#menu-container').removeClass('show');
-  });
 });
 </script>
-
+  <script src="../js/menu.js"></script>
 </body>
 </html>
