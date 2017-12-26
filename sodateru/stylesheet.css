@@ -65,12 +65,35 @@ a:hover{
 
 .box{
   width: 232px;
+  height: 232px;
   margin: 5px;
   padding: 5px;
+  position: relative;
+}
+
+.box a{
+  width: 232px;
+  height: 232px;
+}
+
+.hoverimg{
+  display: none;
+  width: 232px;
+  height: 232px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  margin-top: 4px;
+}
+
+.box a:hover + .hoverimg{
+  display:block;
 }
 
 .box .charm-image, .box .charm-memo {
   display: none;
+  width: 232px;
+  height: 232px;
 }
 
 .modal-overlay {

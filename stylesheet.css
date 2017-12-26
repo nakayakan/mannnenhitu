@@ -23,25 +23,6 @@ body {
   height: auto;
 }
 
-/*.insta{
-  position: absolute;
-  left: 20%;
-  top: 23%;
-}
-
-.info{
-  position: absolute;
-  left:  21%;
-  top: 62%;
-}
-
-.link{
-  position: absolute;
-  left: 72%;
-  top: 33%;
-}
-*/
-
 ul{
   list-style: none;
   overflow: hidden;
@@ -53,12 +34,19 @@ ul{
 
 li{
   float: left;
-  width: 100px;
+  width: 90px;
 }
 
 li img{
-  width: 30px;
+  width: 25px;
   height: auto;
+}
+
+.memo{
+  position: absolute;
+  top: 3%;
+  right: 10%;
+  z-index: 3;
 }
 
 a{
@@ -71,8 +59,8 @@ a:hover{
 
 .button{
   position: absolute;
-  right: 15%;
-  top: 20px;
+  right: 10%;
+  top: 7%;
 }
 
 .contents {
@@ -112,7 +100,7 @@ a:hover{
 }
 
 .debug-mode {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 .debug-mode.frame1 {
@@ -344,6 +332,10 @@ a:hover{
   left: 50px;
   top: -500px;
   transition: 1s;
+}
+
+.peninfo{
+  margin: 150px 50px;
 }
 
 .pen-active {
