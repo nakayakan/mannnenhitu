@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="stylesheet" href="lity.min.css">
+  <link rel="stylesheet" href="../menu.css">
   <script src="jquery.js"></script>
   <script src="lity.min.js"></script>
 
@@ -19,14 +20,75 @@
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
-  <a href="../index.html" class="logo"><img src="../images/logo.png" class="logoimg" alt=""></a>
-  <div class="illust">
-    <ul>
-      <li><a href="https://youtu.be/ufZodtiaT1o&autoplay=" data-lity="data-lity"><img src="./images/pelikan.jpg" alt="イラスト1"></a></li>
-      <li><a href="https://youtu.be/ogSMHlvGqRg&autoplay=" data-lity="data-lity"><img src="./images/sailor.jpg" alt="イラスト1"></a></li>
-      <li><a href="https://youtu.be/VuxKcnz3QxM&autoplay=" data-lity="data-lity"><img src="./images/pilot.jpg" alt="イラスト1"></a></li>
-    </ul>
+  <div id="menu"></div>
+  <div id="menu-container">
+    <div id="menu-close"></div>
+    <div class="menu-contents">
+      <div class="menu-logo">
+        <img src="../images/logo.png" alt="">
+      </div>
+      <ul class="menu-links">
+        <li><a href="../info/index.html" class="top"><img src="../images/info2.png" alt=""></a></li>
+        <li><a href="../insta/index.html" class="top"><img src="../images/insta2.png" alt=""></a></li>
+        <li><a href="../sodateru/index.html" class="top"><img src="../images/sodate2.png" alt=""></a></li>
+      </ul>
+    </div>
   </div>
+
+  <div class="container">　
+    <div class="contents">
+      <div class="thumbnail">
+        <a href="https://youtu.be/ufZodtiaT1o" data-lity="data-lity">
+          <img src="./images/illust-1.jpg" alt="">
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://youtu.be/ogSMHlvGqRg" data-lity="data-lity">
+          <img src="./images/illust-2.jpg" alt="">
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="https://youtu.be/VuxKcnz3QxM" data-lity="data-lity">
+          <img src="./images/illust-3.jpg" alt="">
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="" data-lity="data-lity">
+          <img src="./images/illust-1.jpg" alt="">
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href="" data-lity="data-lity">
+          <img src="./images/illust-1.jpg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="right">
+      <div class="logo"><a href="../index.html" class="top"><img src="../images/logo.png" alt="" class="logoimg"></a></div>
+      <div class="title"><img src="images/title.png" alt=""/></div>
+      <div class="info"><img src="images/info.png" alt=""/></div>
+    </div>
+  </div>
+
+
+  <script src="../js/menu.js"></script>
+
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player
+    $(document).on('lity:ready', function(event, instance) {
+      setTimeout(function() {
+        lity.current().close()
+      }, 1000 * 60 * 2)
+    });
+
+    function onPlayerStateChange(event) {
+      console.log(event)
+    }
+  </script>
 </body>
 </html>

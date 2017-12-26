@@ -1,7 +1,7 @@
 html{
-    cursor: url(images/cursor.png),url(images/cursor.cur),pointer;
+    cursor: url(./images/cursor.png),url(./images/cursor.cur),pointer;
 }
 
 a:hover{
-    cursor: url(images/cursor_hand.png),url(images/cursor_hand.cur),pointer;
+    cursor: url(./images/cursor_hand.png),url(./images/cursor_hand.cur),pointer;
 }
