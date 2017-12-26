@@ -1,14 +1,9 @@
 body {
-  cursor: url(cursor2.png),url(cursor2.cur),pointer;
   padding: 0;
   margin: 0;
   overflow: hidden;
   background: url(images/back.jpg) no-repeat;
   background-size: cover;
-}
-
-a:hover{
-  cursor: url(images/cursor_hand.png),url(images/cursor_hand.cur),pointer;
 }
 
 .logo{
@@ -33,7 +28,7 @@ a:hover{
 }
 
 #video {
-  background: url('/back.jpg') no-repeat; // 動画が再生を始めるまで、cssのほうでも背景を設定します。
+  background: url('images/back.jpg') no-repeat; // 動画が再生を始めるまで、cssのほうでも背景を設定します。
   background-attachment: fixed; // 中央揃えになるように、fixed。
   background-position: center center; // positionも中央に。
   background-size: cover; // 画面サイズに応じてサイズを可変するように設定。
