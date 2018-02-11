@@ -29,37 +29,39 @@
     <div class="wrapper">
       <video src="images/backmovie1.mp4" autoplay id="video"></video>
       <img src="images/test.png" alt="Placeholder" id='img'>
-      <div class="frame1 debug-mode" id="img1">1</div>
-      <div class="frame1 debug-mode" id="img2">2</div>
-      <div class="frame1 debug-mode" id="img3">3</div>
-      <div class="frame2 debug-mode" id="img4">4</div>
-      <div class="frame2 debug-mode" id="img5">5</div>
-      <div class="frame2 debug-mode" id="img6">6</div>
-      <div class="frame2 debug-mode" id="img7">7</div>
-      <div class="frame2 debug-mode" id="img8">8</div>
-      <div class="frame2 debug-mode" id="img9">9</div>
-      <div class="frame3 debug-mode" id="img10">10</div>
-      <div class="frame3 debug-mode" id="img101">10.1</div>
-      <div class="frame3 debug-mode" id="img102">10.2</div>
-      <div class="frame3 debug-mode" id="img11">11</div>
-      <div class="frame3 debug-mode" id="img12">12</div>
-      <div class="frame3 debug-mode" id="img13">13</div>
-      <div class="frame4 debug-mode" id="img14">14</div>
-      <div class="frame4 debug-mode" id="img141">14.1</div>
-      <div class="frame4 debug-mode" id="img142">14.2</div>
-      <div class="frame4 debug-mode" id="img15">15</div>
-      <div class="frame4 debug-mode" id="img16">16</div>
-      <div class="frame5 debug-mode" id="img17">17</div>
-      <div class="frame2 debug-mode" id="img18">18</div>
-      <div class="frame2 debug-mode" id="img181">18.1</div>
-      <div class="frame2 debug-mode" id="img182">18.2</div>
-      <div class="frame2 debug-mode" id="img19">19</div>
-      <div class="frame2 debug-mode" id="img20">20</div>
-      <div class="frame2 debug-mode" id="img21">21</div>
-      <div class="frame2 debug-mode" id="img22">22</div>
-      <div class="frame2 debug-mode" id="img221">22.1</div>
-      <div class="frame3 debug-mode" id="img23">23</div>
-      <div class="frame2 debug-mode" id="img24">24</div>
+      <div id="frames">
+        <div class="frame1 debug-mode" id="img1"    data-timing="500">1</div>
+        <div class="frame1 debug-mode" id="img2"    data-timing="3000">2</div>
+        <div class="frame1 debug-mode" id="img3"    data-timing="5000">3</div>
+        <div class="frame2 debug-mode" id="img4"    data-timing="9200">4</div>
+        <div class="frame2 debug-mode" id="img5"    data-timing="14000">5</div>
+        <div class="frame2 debug-mode" id="img6"    data-timing="18000">6</div>
+        <div class="frame2 debug-mode" id="img7"    data-timing="21000">7</div>
+        <div class="frame2 debug-mode" id="img8"    data-timing="26000">8</div>
+        <div class="frame2 debug-mode" id="img9"    data-timing="31000">9</div>
+        <div class="frame3 debug-mode" id="img10"   data-timing="35000">10</div>
+        <div class="frame3 debug-mode" id="img101"  data-timing="37000">10.1</div>
+        <div class="frame3 debug-mode" id="img102"  data-timing="41000">10.2</div>
+        <div class="frame3 debug-mode" id="img11"   data-timing="43000">11</div>
+        <div class="frame3 debug-mode" id="img12"   data-timing="46000">12</div>
+        <div class="frame3 debug-mode" id="img13"   data-timing="49000">13</div>
+        <div class="frame4 debug-mode" id="img14"   data-timing="52000">14</div>
+        <div class="frame4 debug-mode" id="img141"  data-timing="54500">14.1</div>
+        <div class="frame4 debug-mode" id="img142"  data-timing="56500">14.2</div>
+        <div class="frame4 debug-mode" id="img15"   data-timing="57500">15</div>
+        <div class="frame4 debug-mode" id="img16"   data-timing="60000">16</div>
+        <div class="frame5 debug-mode" id="img17"   data-timing="67000">17</div>
+        <div class="frame2 debug-mode" id="img18"   data-timing="72000">18</div>
+        <div class="frame2 debug-mode" id="img181"  data-timing="79000">18.1</div>
+        <div class="frame2 debug-mode" id="img182"  data-timing="83000">18.2</div>
+        <div class="frame2 debug-mode" id="img19"   data-timing="86500">19</div>
+        <div class="frame2 debug-mode" id="img20"   data-timing="89000">20</div>
+        <div class="frame2 debug-mode" id="img21"   data-timing="93000">21</div>
+        <div class="frame2 debug-mode" id="img22"   data-timing="96000">22</div>
+        <div class="frame2 debug-mode" id="img221"  data-timing="96000">22.1</div>
+        <div class="frame3 debug-mode" id="img23"   data-timing="100000">23</div>
+        <div class="frame2 debug-mode" id="img24"   data-timing="105000">24</div>
+      </div>
     </div>
   </div>
 <div class="pen1 pen">
@@ -88,162 +90,31 @@
   </div>
 
 <script>
-$(function(){
-    setTimeout(function(){
-        $('#img1').show();
-    }, 500);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img2').show();
-    }, 3000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img3').show();
-    }, 5000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img4').show();
-    }, 9200);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img5').show();
-    }, 14000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img6').show();
-    }, 18000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img7').show();
-    }, 21000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img8').show();
-    }, 26000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img9').show();
-    }, 31000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img10').show();
-    }, 35000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img101').show();
-    }, 37000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img102').show();
-    }, 41000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img11').show();
-    }, 43000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img12').show();
-    }, 46000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img13').show();
-    }, 49000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img14').show();
-    }, 52000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img141').show();
-    }, 54500);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img142').show();
-    }, 56500);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img15').show();
-    }, 57500);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img16').show();
-    }, 60000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img17').show();
-    }, 67000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img18').show();
-    }, 72000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img181').show();
-    }, 79000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img182').show();
-    }, 83000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img19').show();
-    }, 86500);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img20').show();
-    }, 89000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img21').show();
-    }, 93000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img22').show();
-    }, 96000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img221').show();
-    }, 96000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img23').show();
-    }, 100000);
-});
-$(function(){
-    setTimeout(function(){
-        $('#img24').show();
-    }, 105000);
-});
+var frameSetTimeOuts = []
+function hideFrames() {
+  frameSetTimeOuts.forEach(clearTimeout)
+  frameSetTimeOuts = []
+  $('#frames').children('div').hide()
+}
 
+function framesShow() {
+  hideFrames()
+  $('#frames').children('div').each(function(a, b, c) {
+    var $target = $(this)
+    frameSetTimeOuts.push(setTimeout(function() {
+      console.log($target.data('timing'))
+      $target.show()
+    }, $target.data('timing')))
+  })
+}
+
+$video = $('#video')
+$video.on('ended', function() {
+  this.play()
+})
+$video.on('play', function() {
+  framesShow()
+})
 
 var timeOutMS = 100
 
