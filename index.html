@@ -27,7 +27,7 @@
 
   <div class="contents">
     <div class="wrapper">
-      <video src="images/backmovie1.mp4" autoplay id="video"></video>
+      <video src="images/backmovie1.mp4" id="video"></video>
       <img src="images/test.png" alt="Placeholder" id='img'>
       <div id="frames">
         <div class="frame1 debug-mode" id="img1"    data-timing="500">1</div>
@@ -90,31 +90,25 @@
   </div>
 
 <script>
-var frameSetTimeOuts = []
 function hideFrames() {
-  frameSetTimeOuts.forEach(clearTimeout)
-  frameSetTimeOuts = []
   $('#frames').children('div').hide()
 }
 
-function framesShow() {
-  hideFrames()
-  $('#frames').children('div').each(function(a, b, c) {
-    var $target = $(this)
-    frameSetTimeOuts.push(setTimeout(function() {
-      console.log($target.data('timing'))
-      $target.show()
-    }, $target.data('timing')))
-  })
-}
-
-$video = $('#video')
+var $video = $('#video')
 $video.on('ended', function() {
+  hideFrames()
   this.play()
 })
-$video.on('play', function() {
-  framesShow()
+
+$video.on('timeupdate', function() {
+  var currentTime = this.currentTime * 1000
+  $('#frames').children('div').each(function() {
+    var $target = $(this)
+    if($target.data('timing') <= currentTime ) $target.show()
+  })
 })
+
+$video[0].play()
 
 var timeOutMS = 100
 
@@ -189,10 +183,10 @@ $('.frame5').mouseout(function(){
 var video = document.getElementById('video');
 $(function() {
     $('.button').click(function(){
-        //動画を停止
+      //動画を停止
         video.pause();
         video.currentTime = 0;
-        // 背景動画を非表示
+      // 背景動画を非表示
         $("#video").toggle(false);
         $('#img').css('display', 'inline-block');
         $('.frame1').show();
