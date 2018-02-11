@@ -4,15 +4,11 @@
     float:left;
     position: relative;
     cursor: pointer;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    /*戻るときのアニメーション*/
+    transition: all 1.5s ease;
 }
+
 .flip-boards .board div
 {
     position: absolute;
@@ -25,12 +21,14 @@
     backface-visibility:     hidden;
 }
 
-.flip-boards:hover .board.top
+.flip-boards:hover .board
 {
     -webkit-transform: rotateX( 180deg );
     -moz-transform: rotateX( 180deg );
     -ms-transform: rotateX( 180deg );
     transform: rotateX( 180deg );
+    /*めくる時のアニメーション*/
+    transition: all 0.5s ease;
 }
 .flip-boards .board.top .flipped
 {
