@@ -27,9 +27,8 @@
   <a href="../index.html" class="logo"><img src="images/logo.png" class="logoimg" alt=""></a>
   <div class="contents">
     <div class="wrapper">
-      <video src="images/info.mp4" autoplay muted id="video">
-        <img src="images/back.jpg" alt="Placeholder" id='img'>
-      </video>
+      <video src="images/info.mp4" autoplay muted id="video"></video>
+      <img src="images/back.jpg" alt="Placeholder" id='img'>
     </div>
   </div>
 
@@ -56,7 +55,7 @@ var video = document.getElementById('video');
           video.currentTime = 0;
           // 背景動画を非表示
           $("#video").toggle(false);
-          $('#img').css('display', 'inline-block');
+          $('#img').css('display', 'block');
         });
       });
   </script>
