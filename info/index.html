@@ -19,35 +19,45 @@
 
 <body>
   <script src="../js/jquery-3.2.1.min.js"></script>
-  <!--<script src="js/scripts.js"></script>-->
+  <div class="button">
+    <img src="images/skip.png" alt="">
+  </div>
   <div id="menu"></div>
-  <a href="../index.html" class="logo"><img src="../images/logo.png" class="logoimg" alt=""></a>
-  <div class="wrapper">
-    <video src="images/info_movie.mp4" autoplay id="video">
-    <img src="images/back.jpg" alt="Placeholder">
-    </video>
+  <a href="../index.html" class="logo"><img src="images/logo.png" class="logoimg" alt=""></a>
+  <div class="contents">
+    <div class="wrapper">
+      <video src="images/info.mp4" autoplay muted id="video">
+        <img src="images/back.jpg" alt="Placeholder" id='img'>
+      </video>
+    </div>
   </div>
 
   <div id="menu-container">
     <div id="menu-close"></div>
     <div class="menu-contents">
       <div class="menu-logo">
-        <a href="../index.html" class="menulogo"><img src="../sodateru/images/logo.png" alt=""></a>
+        <a href="../index.html" class="menulogo"><img src="images/logo.png" alt=""></a>
       </div>
       <ul class="menu-links">
         <li><a href="../info/index.html" class="top"><img src="../images/about.png" alt=""></a></li>
-        <li><a href="../insta/index.html" class="top"><img src="../images/draw.png" alt=""></a></li>
-        <li><a href="../sodateru/index.html" class="top"><img src="../images/charm.png" alt=""></a></li>
+        <li><a href="../kaku/index.html" class="top"><img src="../images/draw.png" alt=""></a></li>
+        <li><a href="../miryoku/index.html" class="top"><img src="../images/charm.png" alt=""></a></li>
       </ul>
     </div>
   </div>
-<!--
-  <div class="wrapper">
-      <video src="images/back.mp4" autoplay loop id="video">
-      <img src="images/43356.jpg" alt="Placeholder">
-      </video>
-    </div>
--->
   <script src="../js/menu.js"></script>
+  <script>
+var video = document.getElementById('video');
+  $(function() {
+      $('.button').click(function(){
+          //動画を停止
+          video.pause();
+          video.currentTime = 0;
+          // 背景動画を非表示
+          $("#video").toggle(false);
+          $('#img').css('display', 'inline-block');
+        });
+      });
+  </script>
 </body>
 </html>

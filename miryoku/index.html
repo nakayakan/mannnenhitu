@@ -29,8 +29,8 @@
     </div>
     <ul class="menu-links">
       <li><a href="../info/index.html" class="top"><img src="../images/about.png" alt=""></a></li>
-      <li><a href="../insta/index.html" class="top"><img src="../images/draw.png" alt=""></a></li>
-      <li><a href="../sodateru/index.html" class="top"><img src="../images/charm.png" alt=""></a></li>
+      <li><a href="../kaku/index.html" class="top"><img src="../images/draw.png" alt=""></a></li>
+      <li><a href="../miryoku/index.html" class="top"><img src="../images/charm.png" alt=""></a></li>
     </ul>
   </div>
 </div>
@@ -59,10 +59,9 @@
             <img src="images/nazimu.png" alt="なじむ"/>
           </div>
           <div class="flipped">
-            <img src="images/pensaki_img.jpg" alt="" class="hoverimg">
-            <!--ここ画像代用してるのでちゃんと変えるの忘れずに-->
+            <img src="images/nazimu_img.jpg" alt="" class="hoverimg">
           </div>
-          <img class="charm-image" src="images/pensaki_img.jpg" alt=""/>
+          <img class="charm-image" src="images/nazimu_img.jpg" alt=""/>
           <img class="charm-memo" src="images/nazimu_info.png" alt=""/>
         </a>
       </div>
@@ -153,19 +152,19 @@
             <img src="images/pensaki_img.jpg" alt="" class="hoverimg">
           </div>
           <img class="charm-image" src="images/pensaki_img.jpg" alt=""/>
-          <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
+          <img class="charm-memo" src="images/pensaki_info.png" alt=""/>
         </a>
       </div>
       <div class="box flip-boards">
         <a data-target="modal1" class="modal-open board left">
           <div class="front">
-            <img src="images/zikan.png" alt="じかん"/>
+            <img src="images/tema.png" alt="手間"/>
           </div>
           <div class="flipped">
-            <img src="https://placehold.jp/500x500.png" alt="" class="hoverimg">
+            <img src="images/tema_img.jpg" alt="" class="hoverimg">
           </div>
-          <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
-          <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
+          <img class="charm-image" src="images/tema_img.jpg" alt=""/>
+          <img class="charm-memo" src="images/tema_info.png" alt=""/>
         </a>
       </div>
       <div class="box flip-boards">
@@ -174,10 +173,10 @@
             <img src="images/okisa.png" alt="おおきさ"/>
           </div>
           <div class="flipped">
-            <img src="https://placehold.jp/500x500.png" alt="" class="hoverimg">
+            <img src="images/okisa_img.jpg" alt="" class="hoverimg">
           </div>
-          <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
-          <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
+          <img class="charm-image" src="images/okisa_img.jpg" alt=""/>
+          <img class="charm-memo" src="images/okisa_info.png" alt=""/>
         </a>
       </div>
       <div class="box flip-boards">
@@ -186,10 +185,10 @@
             <img src="images/sozai.png" alt="そざい"/>
           </div>
           <div class="flipped">
-            <img src="https://placehold.jp/500x500.png" alt="" class="hoverimg">
+            <img src="images/sozai_img.jpg" alt="" class="hoverimg">
           </div>
-          <img class="charm-image" src="https://placehold.jp/500x500.png" alt=""/>
-          <img class="charm-memo" src="https://placehold.jp/300x400.png" alt=""/>
+          <img class="charm-image" src="images/sozai_img.jpg" alt=""/>
+          <img class="charm-memo" src="images/sozai_info.png" alt=""/>
         </a>
       </div>
     </div>
@@ -210,29 +209,23 @@
 
 <script>
   $(function(){
-
     // 「.modal-open」をクリック
     $('.modal-open').click(function(){
       // オーバーレイ用の要素を追加
       $('body').append('<div class="modal-overlay"></div>');
       // オーバーレイをフェードイン
       $('.modal-overlay').fadeIn('slow');
-
       // モーダルコンテンツのIDを取得
       var modal = '#' + $(this).attr('data-target');
-
       // モーダルコンテンツの更新
       var charmImageSrc = $(this).find('.charm-image').attr('src')
       var charmMemoSrc = $(this).find('.charm-memo').attr('src')
-
       $(modal).find('.modalimg').attr('src', charmImageSrc);
       $(modal).find('.modal-memo-img').attr('src', charmMemoSrc);
-
       // モーダルコンテンツの表示位置を設定
       modalResize();
       // モーダルコンテンツフェードイン
       $(modal).fadeIn('slow');
-
       // 「.modal-overlay」あるいは「.modal-close」をクリック
       $('.modal-overlay, .modal-close').off().click(function(){
         // モーダルコンテンツとオーバーレイをフェードアウト
@@ -242,26 +235,21 @@
           $('.modal-overlay').remove();
         });
       });
-
       // リサイズしたら表示位置を再取得
       $(window).on('resize', function(){
         modalResize();
       });
-
       // モーダルコンテンツの表示位置を設定する関数
       function modalResize(){
         // ウィンドウの横幅、高さを取得
         var w = $(window).width();
         var h = $(window).height();
-
         // モーダルコンテンツの表示位置を取得
         var x = (w - $(modal).outerWidth(true)) / 2;
         var y = (h - $(modal).outerHeight(true)) / 2;
-
         // モーダルコンテンツの表示位置を設定
         $(modal).css({'left': x + 'px','top': y + 'px'});
       }
-
     });
   });
 </script>

@@ -5,7 +5,7 @@
     width: 30px;
     height: 34px;
     display: inline-block;
-    background-image: url('./sodateru/images/menu.png');
+    background-image: url('./miryoku/images/menu.png');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
@@ -23,7 +23,7 @@
     margin: 30px;
     width: 30px;
     height: 34px;
-    background-image: url('./sodateru/images/x.png');
+    background-image: url('./miryoku/images/x.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
