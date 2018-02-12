@@ -21,7 +21,7 @@
     backface-visibility:     hidden;
 }
 
-.flip-boards:hover .board
+.flip-boards.hover .board
 {
     -webkit-transform: rotateX( 180deg );
     -moz-transform: rotateX( 180deg );
@@ -37,7 +37,7 @@
     -ms-transform: rotateX( 180deg );
     transform: rotateX( 180deg );
 }
-.flip-boards:hover .board.left
+.flip-boards.hover .board.left
 {
     -webkit-transform: rotateY( 180deg );
     -moz-transform: rotateY( 180deg );

@@ -253,6 +253,30 @@
         $(modal).css({'left': x + 'px','top': y + 'px'});
       }
     });
+
+    $('.flip-boards').mouseenter(function() {      
+      if(!$(this).hasClass('hover')) {
+        var transitionendPromise = new Promise((resolve, reject) => {
+          $(this).on('transitionend', function() {            
+            setTimeout(resolve, 500)          
+          })
+        })
+        var mouseleavePromise = new Promise((resolve, reject) => {
+          $(this).on('mouseleave', function() {            
+            resolve()
+          })
+        })
+      }      
+
+      $(this).addClass('hover')
+
+      Promise.all([transitionendPromise, mouseleavePromise])
+      .then(() => {
+        $(this).removeClass('hover')
+        $(this).off('transitionend')
+        $(this).off('mouseleave')
+      })
+    })
   });
 </script>
 <script src="../js/menu.js"></script>
